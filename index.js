@@ -11,7 +11,7 @@ app.get('/fahrenheit/:valor/celsius', (req, res) => {
 
     let valor = req.params.valor;
     let celsius = (valor - 32) * 5 / 9;
-    res.json({ "celsius": celsius, "maquina": os.hostname() });
+    res.json({ "celsius": celsius, "maquina": os.hostname() });  
 });
 
 app.get('/celsius/:valor/fahrenheit', (req, res) => {
@@ -37,6 +37,6 @@ app.get('/temperatura/celsiusparafahrenheit/:valor', (req, res) => {
 });
 
 
-app.listen(8080, () => {
+app.listen(3030, () => {
     console.log("Servidor rodando na porta 8080");
 });
